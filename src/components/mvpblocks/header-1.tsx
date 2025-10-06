@@ -6,51 +6,14 @@ import { Menu, X, ChevronDown, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 import Image from "next/image";
+import { navItems } from "@/_constants/nav-items";
 
-interface NavItem {
+export interface NavItem {
   name: string;
   href: string;
   hasDropdown?: boolean;
   dropdownItems?: { name: string; href: string; description?: string }[];
 }
-
-const navItems: NavItem[] = [
-  { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
-  {
-    name: "Services",
-    href: "/services",
-    hasDropdown: true,
-    dropdownItems: [
-      {
-        name: "Web Design",
-        href: "/web-design",
-        description: "Design your website",
-      },
-      {
-        name: "Web Development",
-        href: "/web-development",
-        description: "Build your website",
-      },
-      {
-        name: "Search Engine Optimization",
-        href: "/seo",
-        description: "Optimize your website for search",
-      },
-      {
-        name: "Email Templates",
-        href: "/email-templates",
-        description: "Create custom email templates",
-      },
-      {
-        name: "A/B Testing",
-        href: "/ab-testing",
-        description: "Test your website",
-      },
-    ],
-  },
-  { name: "Solutions", href: "/solutions" },
-];
 
 export default function Header1() {
   const [isScrolled, setIsScrolled] = useState(false);

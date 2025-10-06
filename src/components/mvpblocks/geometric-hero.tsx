@@ -12,46 +12,7 @@ const pacifico = Pacifico({
   variable: '--font-pacifico',
 });
 
-function ElegantShape({
-  className,
-  delay = 0,
-  width = 400,
-  height = 100,
-  rotate = 0,
-  gradient = 'from-white/[0.08]',
-}: {
-  className?: string;
-  delay?: number;
-  width?: number;
-  height?: number;
-  rotate?: number;
-  gradient?: string;
-}) {
-  return (
-    <motion.div
-      initial={{
-        opacity: 0,
-        y: -150,
-        rotate: rotate - 15,
-      }}
-      animate={{
-        opacity: 1,
-        y: 0,
-        rotate: rotate,
-      }}
-      transition={{
-        duration: 2.4,
-        delay,
-        ease: [0.23, 0.86, 0.39, 0.96],
-        opacity: { duration: 1.2 },
-      }}
-      className={cn('absolute', className)}
-    >
-    </motion.div>
-  );
-}
-
-export default function HeroGeometric({
+export default function HeroSection({
   title1 = 'Take Your Business Online',
   title2 = 'With Ease',
 }: {
@@ -72,7 +33,7 @@ export default function HeroGeometric({
   };
 
   return (
-    <div className="bg-background relative flex min-h-screen w-full items-center justify-center overflow-hidden dark:bg-black">
+    <div className="bg-background relative flex pt-42 pb-20 w-full items-center justify-center overflow-hidden dark:bg-black">
       <div className="relative z-10 container mx-auto max-w-6xl px-4 md:px-6">
         <div className="mx-auto max-w-3xl text-center">
           <motion.div
