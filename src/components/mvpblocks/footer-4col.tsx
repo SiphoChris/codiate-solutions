@@ -1,84 +1,12 @@
+import Link from "next/link";
 import {
-  Dribbble,
-  Facebook,
-  Github,
-  Instagram,
-  Mail,
-  MapPin,
-  Phone,
-  Twitter,
-} from 'lucide-react';
-import Link from 'next/link';
-
-const data = {
-  facebookLink: 'https://facebook.com/mvpblocks',
-  instaLink: 'https://instagram.com/mvpblocks',
-  twitterLink: 'https://twitter.com/mvpblocks',
-  githubLink: 'https://github.com/mvpblocks',
-  dribbbleLink: 'https://dribbble.com/mvpblocks',
-  services: {
-    webdev: '/web-development',
-    webdesign: '/web-design',
-    marketing: '/marketing',
-    googleads: '/google-ads',
-  },
-  about: {
-    history: '/company-history',
-    team: '/meet-the-team',
-    handbook: '/employee-handbook',
-    careers: '/careers',
-  },
-  help: {
-    faqs: '/faqs',
-    support: '/support',
-    livechat: '/live-chat',
-  },
-  contact: {
-    email: 'hello@mvpblocks.com',
-    phone: '+91 8637373116',
-    address: 'Kolkata, West Bengal, India',
-  },
-  company: {
-    name: 'Codiate Solutions',
-    description:
-      'Building beautiful and functional web experiences with modern technologies. We help businesses create their digital presence.',
-    logo: '/images/codiate-favicon.svg',
-  },
-};
-
-const socialLinks = [
-  { icon: Facebook, label: 'Facebook', href: data.facebookLink },
-  { icon: Instagram, label: 'Instagram', href: data.instaLink },
-  { icon: Twitter, label: 'Twitter', href: data.twitterLink },
-  { icon: Github, label: 'GitHub', href: data.githubLink },
-  { icon: Dribbble, label: 'Dribbble', href: data.dribbbleLink },
-];
-
-const aboutLinks = [
-  { text: 'Company History', href: data.about.history },
-  { text: 'Meet the Team', href: data.about.team },
-  { text: 'Employee Handbook', href: data.about.handbook },
-  { text: 'Careers', href: data.about.careers },
-];
-
-const serviceLinks = [
-  { text: 'Web Development', href: data.services.webdev },
-  { text: 'Web Design', href: data.services.webdesign },
-  { text: 'Marketing', href: data.services.marketing },
-  { text: 'Google Ads', href: data.services.googleads },
-];
-
-const helpfulLinks = [
-  { text: 'FAQs', href: data.help.faqs },
-  { text: 'Support', href: data.help.support },
-  { text: 'Live Chat', href: data.help.livechat, hasIndicator: true },
-];
-
-const contactInfo = [
-  { icon: Mail, text: data.contact.email },
-  { icon: Phone, text: data.contact.phone },
-  { icon: MapPin, text: data.contact.address, isAddress: true },
-];
+  data,
+  socialLinks,
+  aboutLinks,
+  serviceLinks,
+  helpfulLinks,
+  contactInfo,
+} from "@/_constants/footer-data";
 
 export default function Footer4Col() {
   return (
@@ -153,25 +81,15 @@ export default function Footer4Col() {
             <div className="text-center sm:text-left">
               <p className="text-lg font-medium">Helpful Links</p>
               <ul className="mt-8 space-y-4 text-sm">
-                {helpfulLinks.map(({ text, href, hasIndicator }) => (
+                {helpfulLinks.map(({ text, href }) => (
                   <li key={text}>
                     <a
                       href={href}
-                      className={`${
-                        hasIndicator
-                          ? 'group flex justify-center gap-1.5 sm:justify-start'
-                          : 'text-secondary-foreground/70 transition'
-                      }`}
+                      className={"text-secondary-foreground/70 transition"}
                     >
                       <span className="text-secondary-foreground/70 transition">
                         {text}
                       </span>
-                      {hasIndicator && (
-                        <span className="relative flex size-2">
-                          <span className="bg-primary absolute inline-flex h-full w-full animate-ping rounded-full opacity-75" />
-                          <span className="bg-primary relative inline-flex size-2 rounded-full" />
-                        </span>
-                      )}
                     </a>
                   </li>
                 ))}

@@ -10,6 +10,10 @@
   .secondary-gradient {
     @apply bg-gradient-to-r from-rose-500 to-rose-700;
   }
+
+  .tertiary-gradient {
+    @apply bg-gradient-to-r to-rose-400;
+  }
 }
 
 

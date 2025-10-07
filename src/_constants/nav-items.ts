@@ -26,6 +26,11 @@ export const navItems: NavItem[] = [
         description: "Build your website",
       },
       {
+        name: "Web Maintainance",
+        href: "/web-maintainance",
+        description: "Maintain your website",
+      },
+      {
         name: "Search Engine Optimization",
         href: "/seo",
         description: "Optimize your website for search",
@@ -36,8 +41,8 @@ export const navItems: NavItem[] = [
         description: "Create custom email templates",
       },
       {
-        name: "A/B Testing",
-        href: "/ab-testing",
+        name: "QA Testing",
+        href: "/qa-testing",
         description: "Test your website",
       },
     ],

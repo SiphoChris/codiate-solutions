@@ -3,7 +3,7 @@ import {
   Mail,
   Paintbrush,
   Rocket,
-  Book,
+  Wrench,
   Hammer,
 } from 'lucide-react';
 
@@ -12,6 +12,11 @@ export const services = [
     icon: <Code className="h-6 w-6" />,
     title: 'Web Development',
     desc: 'We build modern, responsive websites that are fast, secure, and user-friendly.',
+  },
+  {
+    icon: <Wrench className="h-6 w-6" />,
+    title: 'Web Maintainance',
+    desc: 'We maintain and update your website to keep it up-to-date and secure.',
   },
   {
     icon: <Mail className="h-6 w-6" />,
@@ -30,7 +35,7 @@ export const services = [
   },
   {
     icon: <Hammer className="h-6 w-6" />,
-    title: 'A/B Testing',
-    desc: 'We conduct A/B tests to help you make informed decisions about your website.',
+    title: 'QA Testing',
+    desc: 'We conduct quality assurance tests to help you make informed decisions about your website.',
   }
 ];

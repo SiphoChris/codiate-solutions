@@ -83,7 +83,7 @@ export default function HeroSection({
               size="lg"
               className="from-primary shadow-primary/10 hover:from-primary/90 rounded-full border-none bg-gradient-to-r to-primary shadow-md hover:to-primary/90"
             >
-              Get Started
+              Get in Touch
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
             <Button
