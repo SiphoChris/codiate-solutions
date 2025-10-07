@@ -15,7 +15,7 @@ export default function Portfolio({
   title?: string;
   headline?: string;
   backgroundColor?: string;
-  projects: project[];
+  projects?: project[];
 }) {
   return (
     <section className={cn(`${backgroundColor} w-full py-16 text-white mt-32`)}>
