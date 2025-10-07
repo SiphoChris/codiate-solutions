@@ -35,6 +35,7 @@ export default function Portfolio({
                 <Image
                   src={project.image || '/placeholder.svg'}
                   alt={project.name}
+                  fill={true}
                   className="object-cover"
                 />
               </div>

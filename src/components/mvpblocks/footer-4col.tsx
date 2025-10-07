@@ -19,6 +19,8 @@ export default function Footer4Col() {
               <Image
                 src={data.company.logo}
                 alt="logo"
+                width={32}
+                height={32}
                 className="h-8 w-8 rounded-full"
               />
               <span className="text-2xl font-semibold">
