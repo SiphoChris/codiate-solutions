@@ -7,6 +7,7 @@ import {
   helpfulLinks,
   contactInfo,
 } from "@/_constants/footer-data";
+import Image from "next/image";
 
 export default function Footer4Col() {
   return (
@@ -15,7 +16,7 @@ export default function Footer4Col() {
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           <div>
             <div className="text-primary flex justify-center gap-2 sm:justify-start">
-              <img
+              <Image
                 src={data.company.logo}
                 alt="logo"
                 className="h-8 w-8 rounded-full"

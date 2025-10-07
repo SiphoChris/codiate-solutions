@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { cn } from '@/lib/utils';
 import { Facebook, Linkedin, Twitter } from 'lucide-react';
 import { portfolioProjects, project } from '@/_constants/portfolio';
+import Image from 'next/image';
 
 
 
@@ -31,7 +32,7 @@ export default function Portfolio({
             <div key={project.id} className="group relative">
               <div className="relative h-80 w-full overflow-hidden rounded-lg">
                 <div className="absolute inset-0 z-10 opacity-20 transition-opacity group-hover:opacity-0"></div>
-                <img
+                <Image
                   src={project.image || '/placeholder.svg'}
                   alt={project.name}
                   className="object-cover"
